@@ -20,6 +20,7 @@ app.listen(app.get('port'), function() {
 app.get('/webhook', function(request, response) {
   console.log("ok");
   response.render('pages/webhook');
+  response.console.log("ok")
 });
 // var http = require('http')
 // var createHandler = require('gitlab-webhook-handler')
