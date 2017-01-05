@@ -10,6 +10,9 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "githubhook": "^1.7.1",
+    "gitlab-webhook-handler": "^1.0.1",
+    "gitlabhook": "0.0.17",
     "ejs": "2.4.1",
     "express": "4.13.3"
   },
