@@ -18,9 +18,20 @@ app.listen(app.get('port'), function() {
 });
 
 app.get('/webhook', function(request, response) {
-  console.log("ok");
+  var event = request.headers['x-gitlab-event'];
   response.render('pages/webhook');
-  response.console.log("ok")
+  console.log("ok----------------------------------");
+  if (!event){
+    console.log("err----------------------------------");
+    return;
+  }
+
+  if (event != 'Merge Request Hook'){
+    console.log('not merge----------------------------------');
+    return;
+  }
+
+  console.log('It`s HOOOOOOK------------------------------------');
 });
 // var http = require('http')
 // var createHandler = require('gitlab-webhook-handler')
