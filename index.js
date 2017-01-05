@@ -19,6 +19,7 @@ app.listen(app.get('port'), function() {
 
 app.post('/webhook', function(request, response) {
   var event = request.headers['x-gitlab-event'];
+  console.log(request);
   response.render('pages/webhook');
   console.log("ok----------------------------------");
   if (!event){
