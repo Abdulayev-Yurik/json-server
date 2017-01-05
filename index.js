@@ -28,6 +28,7 @@ app.post('/webhook', function(request, response) {
 
   if (event != 'Merge Request Hook'){
     console.log('not merge----------------------------------');
+    console.log(event);
     return;
   }
 
